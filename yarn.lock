@@ -1052,6 +1052,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@expo-google-fonts/be-vietnam@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/be-vietnam/-/be-vietnam-0.2.0.tgz#572b5e9be3fb40b3afb6dbff65b1a7cd6e351390"
+  integrity sha512-cSQufiY050Rp3+/JW9SNKdLYlRJ+BUczyJrhc20bwSstOeLJtGO5p1pNkTv7ughywY25D2vBUhnYiv1Rc7yuOQ==
+
 "@expo/config-plugins@4.0.16", "@expo/config-plugins@^4.0.2":
   version "4.0.16"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-4.0.16.tgz#832fb533245180c6dfd82fd359474f68a8e857b2"
@@ -2642,6 +2647,18 @@ expo-asset@~8.4.6:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
+expo-av@~10.2.0:
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-10.2.1.tgz#c08bce464d673d0e90c68cac082bfb75a9437f25"
+  integrity sha512-thrkHVg4HVn8L+jHKVnXYd4TLkJQblFE8QXd3d1hwrYG63gehQT2nK4DM0Frl50EcdV8YN9XjhwHobtK5oMc9A==
+  dependencies:
+    "@expo/config-plugins" "^4.0.2"
+
+expo-blur@~11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/expo-blur/-/expo-blur-11.0.0.tgz#3542afed5c0037554657d98c31a5933dd78098dd"
+  integrity sha512-EmIYXFwaqvVDhV4JnG9+nENU7FGZkCcuYZhoOOHjnHyADCGNsT6LIVv9/Q/rO0+qWJJxlUG6bziPHC2wbWcC9A==
+
 expo-constants@~13.0.0:
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/expo-constants/-/expo-constants-13.0.0.tgz#e167b0e4d064029e53a0bc89c8cffcb7cb8f2a0a"
@@ -2821,6 +2838,11 @@ fbjs@^3.0.0:
     promise "^7.1.1"
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.30"
+
+figma-squircle@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/figma-squircle/-/figma-squircle-0.2.0.tgz#7f077549d1591a02ef5f46af51a35876f9032a8f"
+  integrity sha512-vjQ+StXbyGURq7Q1TNrLTWG3oRoc7tV7lcOR/4rhAVqH7R4X8IwslTmKHvultgmcU9qCF9kV4rKiyjYInkJ59w==
 
 fill-range@^4.0.0:
   version "4.0.0"
@@ -4796,6 +4818,13 @@ react-native-codegen@^0.0.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
+
+react-native-figma-squircle@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-figma-squircle/-/react-native-figma-squircle-0.2.0.tgz#4561956d8867cfc333a4dda44347d78a05834a06"
+  integrity sha512-BJK4c1GWwwPNAyu3AVqgh4w8GjqnzcZbR81EzyZwzQnMlvjw3TgOK5UyoUvKg/9MYMn4SfgjO2XXRbclKmMzWQ==
+  dependencies:
+    figma-squircle "^0.2.0"
 
 react-native-gradients@^1.2.0:
   version "1.2.0"
