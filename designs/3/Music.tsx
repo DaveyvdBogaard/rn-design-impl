@@ -79,7 +79,7 @@ const HomeCard = (props: any) => {
         <LightText>{props.description}</LightText>
       </SquircleView>
       <SquircleView
-        style={tw`absolute bottom-0 left-8 w-10 h-10 items-center justify-center shadow-md`}
+        style={tw`absolute bottom-0 left-5 w-10 h-10 items-center justify-center shadow-md`}
         squircleParams={{
           cornerSmoothing: 0.9,
           cornerRadius: 10,
@@ -125,7 +125,7 @@ const MusicHome = () => {
           </View>
         </ScrollView>
         <View style={tw`flex-row flex-wrap`}>
-          <View>
+          <View style={tw`flex-1`}>
             <HomeCard text="Hand & Finger Work" height={37} color="green" />
             <HomeCard
               text="Alternate Strumming"
@@ -140,6 +140,12 @@ const MusicHome = () => {
               description="A traditional folk song sung by Venetian gondoliers."
             />
             <HomeCard
+              text="Chord Dictionary"
+              height={60}
+              color="yellow"
+              description="Learn exactly where to place your fingers to play almost any chord."
+            />
+            <HomeCard
               text="Barcarole"
               height={39}
               color="yellow"
@@ -148,7 +154,7 @@ const MusicHome = () => {
             <HomeCard text="asdsd" height={50} color="yellow" />
             <HomeCard text="asdsd" height={37} color="purple" />
           </View>
-          <View>
+          <View style={tw`flex-1`}>
             <HomeCard
               text="Chord Dictionary"
               height={60}
