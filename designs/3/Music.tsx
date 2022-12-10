@@ -24,6 +24,8 @@ import {
   BeVietnam_700Bold,
 } from "@expo-google-fonts/be-vietnam";
 import { SquircleView } from "react-native-figma-squircle";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useNavigation } from "@react-navigation/native";
 
 const Text = (props: any) => {
   return <RNText {...props} style={[props.style, { fontFamily: "BeVietnam_400Regular" }]} />;
@@ -44,6 +46,8 @@ const BoldText = (props: any) => {
   return <RNText {...props} style={[props.style, { fontFamily: "BeVietnam_700Bold" }]} />;
 };
 
+const Stack = createNativeStackNavigator();
+
 const Music = () => {
   const [loaded] = useFonts({
     BeVietnam_100Thin,
@@ -58,8 +62,15 @@ const Music = () => {
     return null;
   }
 
-  return <MusicHome />;
-  return <MusicGetStarted />;
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="GetStarted" component={MusicGetStarted} />
+      <Stack.Screen name="MusicHome" component={MusicHome} />
+    </Stack.Navigator>
+  );
+
+  // return <MusicHome />;
+  // return <MusicGetStarted />;
 };
 
 const width = Dimensions.get("window").width;
@@ -173,7 +184,10 @@ const MusicHome = () => {
         </View>
       </ScrollView>
       <SafeAreaView style={tw`items-center`}>
-        <BlurView style={tw`bg-[#fffff2] bg-opacity-80 rounded-3xl flex-row absolute bottom-20 overflow-hidden shadow-md`} intensity={20}>
+        <BlurView
+          style={tw`bg-[#fffff2] bg-opacity-80 rounded-3xl flex-row absolute bottom-20 overflow-hidden shadow-md`}
+          intensity={20}
+        >
           <SquircleView
             style={tw`h-18 w-18 m-1 items-center justify-center`}
             squircleParams={{
@@ -224,6 +238,8 @@ const MusicHome = () => {
 const base1 = "#FFF0D2";
 
 const MusicGetStarted = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={tw.style(`flex-1 bg-[${base1}]`)}>
       <StatusBar style="light" />
@@ -249,7 +265,10 @@ const MusicGetStarted = () => {
             Explore world of music
           </SemiBoldText>
           <LightText style={tw`my-2 text-base`}>Learn and practice music skills</LightText>
-          <Pressable style={tw`p-2 mt-6 rounded-xl items-center justify-center bg-[${base1}]`}>
+          <Pressable
+            style={tw`p-2 mt-6 rounded-xl items-center justify-center bg-[${base1}]`}
+            onPress={() => navigation.navigate("MusicHome")}
+          >
             <MediumText style={tw`text-base font-medium px-6 text-center py-1`}>
               Get started <Ionicons name="chevron-forward" size={19} />
             </MediumText>
