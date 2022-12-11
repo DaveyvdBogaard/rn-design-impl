@@ -6,6 +6,7 @@ import Health from "./designs/2/Health";
 import Music from "./designs/3/Music";
 import Events from "./designs/4/Events";
 import Travel from "./designs/5/Travel";
+import Hotel from "./designs/6/Hotel";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,6 +14,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   return (
     <View>
+      <Button title="Hotel" onPress={() => navigation.navigate("Hotel")} />
       <Button title="Travel" onPress={() => navigation.navigate("Travel")} />
       <Button title="Events" onPress={() => navigation.navigate("Events")} />
       <Button title="Music" onPress={() => navigation.navigate("Music")} />
@@ -35,6 +37,7 @@ export default function App() {
         <Stack.Screen name="Events" component={Events} options={{ headerShown: false }} />
         <Stack.Screen name="Music" component={Music} options={{ headerShown: false }} />
         <Stack.Screen name="Health" component={Health} options={{ headerShown: false }} />
+        <Stack.Screen name="Hotel" component={Hotel} options={{ headerShown: false }} />
         <Stack.Screen name="BankyDesign" component={BankyDesign} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
